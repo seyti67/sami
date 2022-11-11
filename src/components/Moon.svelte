@@ -6,8 +6,11 @@
 
 	let distanceKm = tweened(0, { duration: 1000 } );
 	console.log(Number(cookie.get('sizeFactor')));
-	let sizeFactor = Number(cookie.get('sizeFactor')) || 0; // smallest: 0.25, largest: 2.0 (input factor)
-	$: if(sizeFactor) cookie.set('sizeFactor', sizeFactor.toString());
+	let sizeFactor = Number(cookie.get('sizeFactor')) || 0; // smallest: 0.2, largest: 2.0 (input factor)
+	$: if(sizeFactor) {
+		sizeFactor = Math.min(2, Math.max(0.2, sizeFactor));
+		cookie.set('sizeFactor', sizeFactor.toString())
+	};
 	let size = 1; // smallest : 1, biggest : 1.118 (moon size)
 	let phase = 0;
 	const update = () => {

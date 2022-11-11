@@ -40,12 +40,11 @@
 		left: 0;
 		bottom: 0;
 		padding: 1rem;
-		/* transform: translateX(calc(-100% + 2rem)); */
 		background-image: linear-gradient(to top, #0004 20%, #0000);
 		transition: transform 500ms;
 		display: grid;
 		align-items: center;
-		grid-template-columns: 5fr 8ex;
+		grid-template-columns: 5fr 5rem;
 		gap: 0.5rem;
 		grid-template-areas: 'a a' 'b c';
 	}
@@ -82,6 +81,7 @@
 	}
 	
 	.slider {
+		max-width: 30rem;
 		grid-area: b;
 		-webkit-appearance: none;
 		width: 100%;
