@@ -14,7 +14,7 @@
 	let size = 1; // smallest : 1, biggest : 1.118 (moon size)
 	let phase = 0;
 	const update = () => {
-		const now = new AstroTime(new Date('2022-01-01T00:00:00Z'));
+		const now = new AstroTime(new Date());
 		const moonVect = GeoMoon(now);
 
 		const distance = moonVect.Length();
