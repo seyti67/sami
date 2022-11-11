@@ -1,0 +1,35 @@
+---
+import Camera from "../components/Camera.astro";
+import Moon from "../components/Moon.svelte";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <Camera />
+  <main>
+    <h1>Astro <span class="text-gradient">SAMI</span></h1>
+    <Moon client:only />
+  </main>
+</Layout>
+
+<style>
+  main {
+    position: relative;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    min-height: 100%;
+    background-image: linear-gradient(to bottom, #0c0c1bee 20%, #0c0c1b44 70%);
+  }
+  h1 {
+    line-height: 1;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+</style>
