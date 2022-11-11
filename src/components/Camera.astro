@@ -19,10 +19,11 @@
 </style>
 
 <script>
-  const videoStream = await navigator.mediaDevices.getUserMedia({
-    video: { facingMode: "environment" },
+  window.addEventListener("load", async () => {
+    const videoStream = await navigator.mediaDevices.getUserMedia({
+      video: { facingMode: "environment" },
+    });
+    const video = document.querySelector("#video-camera") as HTMLVideoElement;
+    if (video) video.srcObject = videoStream;
   });
-  console.log(videoStream);
-  const video = document.querySelector("#video-camera") as HTMLVideoElement;
-  if (video) video.srcObject = videoStream;
 </script>

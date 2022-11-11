@@ -27,7 +27,7 @@
 	setInterval(update, 10000);
 </script>
 
-<h2>Distance: {Math.round($distanceKm)}km</h2>
+<h2>🌙 distance: {Math.round($distanceKm)}km</h2>
 <div class="moon-cirlce" style:--size="{15*sizeFactor*size}ch">
 	<div class="moon-bg" />
 </div>
